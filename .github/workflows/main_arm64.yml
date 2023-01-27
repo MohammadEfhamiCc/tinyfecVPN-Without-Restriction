@@ -20,7 +20,7 @@ jobs:
           run: |
             apt-get update -q -y
             apt-get install -q -y git make build-essential
-            make -j4 && mv tinyvpn tinyvpn_arm64
+            make nolimit -j4 && mv tinyvpn tinyvpn_arm64
         
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2

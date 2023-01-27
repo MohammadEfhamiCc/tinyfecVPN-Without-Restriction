@@ -12,7 +12,7 @@ jobs:
           
       - name: Make
         working-directory: .
-        run: make -j4 && mv tinyvpn tinyvpn_amd64
+        run: make nolimit -j4 && mv tinyvpn tinyvpn_amd64
         
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
